@@ -3,7 +3,7 @@
 ```
 touch README.md  //新建说明文件
 git init //在当前项目中生成本地git管理，并建立一个隐藏.git项目
-git add 文件名  //添加当前目录中的某个文件到索引
+git add .   //.不能省略
 git commit -m "first commit" //提交到本地源码库，并附加提交注释
 git remote add origin https://github.com/chape/test.git //添加到远程项目,别名为origin
 git push -u origin master //把本地源码库push到github别名为origin的远程项目中，确认提交。
@@ -36,14 +36,14 @@ fatal: remote origin already exists.
 * 先输入$ git pull origin master //先把远程服务器github上面的文件拉下来
 * 再输入$ git push origin master
 * 如果出现报错 fatal: Couldn't find remote ref master或者fatal: 'origin' does not appear to be a git repository以及fatal: Could not read from remote repository.
-* 则需要重新输入$ git remote add origingit@github.com:djqiang/gitdemo.git
+* 则需要重新输入$ git remote add origin git@github.com:djqiang/gitdemo.git
 
 使用git在本地创建一个项目的过程：
 * $ makdir ~/hello-world    //创建一个项目hello-world
 * $ cd ~/hello-world       //打开这个项目
 * $ git init             //初始化 
 * $ touch README
-* $ git add README        //更新README文件
+* $ git add .        //.不能省略
 * $ git commit -m 'first commit'     //提交更新，并注释信息“first commit”
 * $ git remote add origin git@github.com:defnngj/hello-world.git     //连接远程github项目  
 * $ git push -u origin master     //将本地项目更新到github项目上去
